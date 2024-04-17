@@ -1,0 +1,89 @@
+.navbar-nav .nav-link {
+    font-family: "", sans-serif;
+}
+body {
+    background-image: linear-gradient(to right, #87CEEB, #001f3f);
+}
+.jumbotron {
+  margin-top: 40px !important;
+  background-color: rgba(255, 255, 255, 0.5); /* 白色背景，透明度50% */
+  width: 80%; /* 广告大屏宽度为屏幕宽度的80% */
+  margin: auto; /* 在大屏幕上水平居中 */
+}
+
+@media (max-width: 768px) {
+  .jumbotron {
+    width: 100%; /* 在中等屏幕和小屏幕上铺满屏幕宽度 */
+  }
+}
+
+
+.card {
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card-img-top,
+.card-img-bottom {
+  cursor: pointer; /* 设置鼠标样式为手型 */
+}
+
+.card-img-top,
+.card-img-bottom {
+  cursor: pointer; /* 设置鼠标样式为手型 */
+  transition: opacity 0.3s ease; /* 设置过渡效果 */
+}
+
+.card-img-top:hover,
+.card-img-bottom:hover {
+  opacity: 0.7; /* 鼠标停留时透明度减小 */
+}
+
+.card-img {
+    object-fit: cover;
+    height: 200px; /* 设置图片容器的高度为200px，调整为你需要的大小 */
+    width: 100%; /* 使图片宽度填满容器 */
+    transition: opacity 0.3s ease; /* 添加过渡效果 */
+    cursor: pointer; /* 设置鼠标悬停时的样式为手型 */
+}
+
+
+
+ /* 鼠标悬停渐变 */
+.hover-opacity:hover {
+  opacity: 0.8; /* 鼠标悬停时的透明度 */
+  transition: opacity 0.3s ease; /* 添加渐变效果 */
+}
+
+
+.ppt-title {
+  color: #004080; /* 深蓝色 */
+  margin-top: 20px; /* 增加标题与容器顶部的间距 */
+  font-size: 24px; /* 设置标题字体大小 */
+}
+
+
+.card-img {
+    object-fit: cover;
+    height: 200px; /* 设置图片容器的高度为200px，调整为你需要的大小 */
+    width: 100%; /* 使图片宽度填满容器 */
+}
+
+
+ /* 页脚 */
+#footer_wrap {
+  background: linear-gradient(to bottom, #ADD8E6, #000080); /* 从浅蓝渐变到深蓝 */
+  color: white; /* 将文字颜色设置为白色 */
+  padding: 20px 0; /* 增加页脚内部上下填充 */
+  text-align: center; /* 将文字居中显示 */
+  position: relative; /* 将页脚定位方式改为相对定位 */
+  width: 100%; /* 设置页脚宽度为100% */
+  margin-top: 50px; /* 确保页脚不会被页面内容遮挡 */
+}
+
+#footer_wrap i {
+  color: white; /* 图标颜色反转 */
+}

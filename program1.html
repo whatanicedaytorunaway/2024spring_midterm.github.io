@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的python案例</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+      body {
+          background-image: linear-gradient(to right, #87CEEB, #001f3f);
+      }
+
+
+      .code-container {
+          max-height: 335px;
+          overflow: auto;
+          border: 5px solid #ADD8E6;
+          padding: 10px;
+          background-color: #001F3F;
+      }
+
+      .code-container pre {
+          color: #ccc;
+      }
+
+
+    </style>
+
+    <script>
+    var myVideo = document.getElementById("myVideo");
+
+    function playPause() {
+        if (myVideo.paused) {
+            myVideo.play();
+        } else {
+            myVideo.pause();
+        }
+    }
+</script>
+
+</head>
+
+<body>
+      <div class="container mt-4" style="width: 100vw;">
+        <div class="row">
+            <div class="col-lg-6 d-flex">
+                <div class="card flex-grow-1">
+                    <div class="card-body">
+                        <h5 class="card-title">代码示例</h5>
+                        <div class="code-container" style="max-width: 100%;">
+                            <pre>
+                                <code>
+  import turtle as t
+  import random
+  name=input('请输入你的姓名')
+  t.setup(800,800)
+  t.screensize(800,800,'skyblue')
+  ##画圣诞树
+  #画树顶的星星
+  t.penup()
+  t.goto(-20,270)
+  t.pendown()
+  t.pencolor('moccasin')
+  t.fillcolor('orange')
+  t.begin_fill()
+  for i in range(5):
+  t.forward(40)
+  t.right(144)
+  t.end_fill()
+
+  #画圣诞树绿色部分（从下往上）
+  t.penup()
+  t.goto(0,-100)#基部
+  t.pendown()
+
+  t.fillcolor('olivedrab')
+  t.begin_fill()
+
+  t.pencolor('darkgreen')
+  t.pensize(4)
+
+  t.forward(250)
+  t.left(140)
+  t.forward(180)
+
+  t.right(140)
+  t.forward(80)
+  t.left(140)
+  t.forward(180)
+
+  t.right(140)
+  t.forward(50)
+  t.goto(0,250)#顶点
+
+  t.penup()
+  t.goto(0,-100)
+  t.pendown()
+  #从底部开始画左半边
+  t.bk(250)
+  t.left(40)
+  t.forward(180)
+
+  t.left(140)
+  t.forward(80)
+
+  t.right(140)
+  t.forward(180)
+
+  t.left(140)
+  t.forward(50)
+  t.goto(0,250)
+
+  t.end_fill()
+
+  #画圣诞树干
+  t.penup()
+
+  t.fillcolor('sienna')#填充色
+  t.begin_fill()
+
+  t.goto(0,-100)
+  t.pendown()
+  t.pencolor('saddlebrown')
+  t.bk(50)
+  t.left(90)
+  t.forward(100)
+  t.right(90)
+  t.forward(100)
+  t.right(90)
+  t.forward(100)
+  t.right(90)
+  t.forward(50)
+
+  t.end_fill()
+
+  t.penup()
+  #画雪人
+  #身子
+  t.goto(-200,-170)
+  t.pendown()
+  t.dot(165,'white')
+  t.penup()
+  #头
+  t.goto(-210,-80)
+  t.pendown()
+  t.dot(100,'white')
+  t.penup()
+  #眼睛
+  t.goto(-230,-70)#左眼
+  t.pendown()
+  t.dot(10,'black')
+  t.penup()
+  t.goto(-190,-65)#右眼
+  t.pendown()
+  t.dot(10,'black')
+  t.penup()
+  #嘴
+  t.goto(-205,-90)
+  t.pendown()
+  t.dot(4,'red')
+  t.penup()
+  #鼻子
+  t.goto(-215,-80)
+  t.pendown()
+  t.pensize(12)
+  t.pencolor('orange')
+  t.goto(-205,-70)
+  t.penup()
+  #围巾
+  t.goto(-250,-110)
+  t.pendown()
+  t.seth(-30)
+  t.pendown()
+  t.pencolor('crimson')
+  t.pensize(20)
+  t.circle(80,70)
+  t.penup()
+
+  t.goto(-240,-120)
+  t.pendown()
+  t.right(130)
+  t.forward(60)
+  t.penup()
+  #手
+  t.goto(-140,-160)#右手
+  t.pendown()
+  t.pencolor('peru')
+  t.pensize(8)
+  t.pendown()
+  t.goto(-105,-130)
+  t.penup()
+
+  t.goto(-270,-165)#左手
+  t.pendown()
+  t.goto(-305,-140)
+  t.penup()
+
+  #扣子
+  t.goto(-200,-150)#1
+  t.pendown()
+  t.dot(10,"black")
+  t.penup()
+  t.goto(-195,-170)#2
+  t.dot(10,"black")
+  t.penup()
+  t.goto(-189,-188)
+  t.pendown()
+  t.dot(12,'black')
+  t.penup()
+
+  #圣诞帽
+  t.fillcolor('red')
+  t.begin_fill()
+  t.goto(-250,-50)
+  t.pensize(4)
+  t.pendown()
+  t.pencolor('red')
+  t.seth(60)
+  t.circle(-45,100)
+  t.goto(-260,20)#帽子最高点
+  t.goto(-250,-50)
+  t.end_fill()
+  t.penup()
+
+  t.fillcolor('brown')#折叠
+  t.begin_fill()
+  t.goto(-260,20)
+  t.pendown()
+  t.goto(-270,-20)#帽子真正顶点
+  t.goto(-255,-15)
+  t.end_fill()
+  t.penup()
+
+  t.goto(-270,-20)#帽子尖端
+  t.pendown()
+  t.dot(20,'white')
+  t.penup()
+
+
+  #写祝福语
+  t.goto(-200,300)
+  t.pendown()
+  t.write(name+'，圣诞快乐!',font=('华文彩云',40,))
+  #画天上随机的雪花
+  t.speed(0)
+  def draw_snow():#画一个雪花
+  #六片
+
+  for i in range(6):
+      t.pensize(2.5)
+      t.pencolor('white')
+  #画一瓣雪花再返回中点
+      t.forward(10)
+      t.backward(10)
+      t.right(60)
+
+  for i in range(50):#在天空随机出现
+  t.penup()
+  t.goto(random.randint(-400,400),random.randint(-300,400))
+  t.pendown()
+  draw_snow()
+  ts = t.getscreen()
+  ts.getcanvas().postscript(file=r'过圣诞节啦.esp')
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 d-flex">
+                <div class="card flex-grow-1">
+                    <div class="card-body">
+                        <h5 class="card-title">演示视频</h5>
+                        <div style="max-width: 100%;">
+                            <video id="myVideo" controls style="width: 100%;">
+                                <source src="img/present.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+          </div>
+
+        <!-- 介绍 -->
+
+        <div class="container mt-4"　style="width: 100vw;" >
+
+            <div class="100%">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">代码简介</h5>
+                        <p class="card-text">这段代码使用python的turtle库动态地绘制一幅画<br>在用户输入姓名后，画面最后会显示“姓名”+圣诞快乐<br>最后一定数量的雪花随机出现在画面中</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+</body>
+</html>

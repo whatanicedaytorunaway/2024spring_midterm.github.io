@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-oArWq6q5x0Rb5wArMY3MUwvX1fsVCPPrg5T8MlchhGQrtZ8QxJQ4Apfm56i1LjPkc1NIe3z2s60HbN/5Rx+/LQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+
+
+        body {
+          height:100%;
+           background-image:
+             url('love/yang/bg.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .card {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            background-color: rgba(255,255,255,0);
+        }
+        .card-body {
+    background-color: rgba(255, 255, 255, 0);
+}
+        .container-fluid {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .left-content, .right-content {
+                height: auto;
+            }
+        }
+
+
+        .overlay-image {
+    position: fixed;
+    top: 50px;
+    left: 30%;
+    width: 55%;
+    height: 55%;
+
+}
+
+
+        .card-columns {
+  @include media-breakpoint-only(lg) {
+    column-count: 4;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 5;
+  }
+}
+
+
+
+    </style>
+    <title>yang</title>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-custom-blue" style="background-color: #001f3f; width: 100%; background-image: linear-gradient(to bottom, #001f3f, #004289); padding-top: 20px; padding-bottom: 20px;">
+    <div class="container">
+        <a class="navbar-brand" href="#" style="font-family: 'Comic Sans MS', cursive; font-weight: bold;">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="love.html" style="font-family: 'Comic Sans MS', cursive; font-weight: bold;">Back <span class="sr-only">(current)</span></a>
+                </li>
+                <!-- 其他 -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-family: 'Comic Sans MS', cursive; font-weight: bold;">
+                        Others
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="self-portrait.html">Self-portrait</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="love.html">Love</a>
+                        <a class="dropdown-item" href="companion">Companion</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Container -->
+<div class="container-fluid">
+    <div class="row">
+        <!-- 左侧内容区域 -->
+        <div class="col-lg-8 col-md-12 left-content">
+            <!-- 卡片内容 -->
+            <div class="card-columns">
+              <div class="card">
+                <img class="card-img-top" src="love/yang/6.jpg" alt="Card image cap">
+              </div>
+
+
+              <div class="card">
+                <img class="card-img-top" src="love/yang/4.jpg" alt="Card image cap">
+
+              </div>
+
+              <div class="card">
+                <img class="card-img" src="love/yang/1.jpg" alt="Card image">
+              </div>
+
+              <div class="card">
+                <h4>杨</h4>
+                <p>【老鼠ラオシュー】と名乗り、組織化している中国人集団の首領。
+常に薄ら笑いを浮かべている感情の読めない謎の多い男。
+相手の感情を逆なでするのが趣味。
+『楊』は通り名であり、誰も本当の名を知らない。
+気分屋で刹那主義。自身の享楽の為なら他の誰の犠牲も厭わない。</p>
+              </div>
+
+
+              <div class="card">
+                <img class="card-img" src="love/yang/7.jpg" alt="Card image">
+              </div>
+
+
+              <div class="card">
+                <img class="card-img" src="love/yang/2.jpg" alt="Card image">
+              </div>
+
+              <div class="card">
+                <img class="card-img" src="love/yang/3.jpg" alt="Card image">
+              </div>
+
+
+              <div class="card">
+                <h4>点击切换右侧图片</h4>
+                <button id="toggleButton" class="btn btn-primary">change</button>
+
+              </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 右侧内容区域 -->
+        <div class="col-lg-4 col-md-12 right-content">
+            <!-- 图片内容 -->
+            <img id="image" src="love/yang/yang.jpg" class="img-fluid" alt="Responsive image">
+            <img src="love/yang/bg2.jpg" class="overlay-image" alt="Overlay Image">
+
+
+        </div>
+    </div>
+
+</div>
+
+
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<!-- JavaScript -->
+<script>
+    // 当文档加载完成时执行
+    $(document).ready(function(){
+    
+        $('.card').css('opacity', '1');
+    });
+
+    $(document).ready(function(){
+    var toggleButton = $('#toggleButton');
+    var image = $('#image');
+
+    var imageState = 'yang';
+
+    toggleButton.click(function(){
+        if(imageState === 'yang') {
+            image.attr('src', 'love/yang/yang2.jpg');
+            imageState = 'yang2';
+        } else {
+            image.attr('src', 'love/yang/yang.jpg');
+            imageState = 'yang';
+        }
+    });
+});
+</script>
+
+</body>
+</html>

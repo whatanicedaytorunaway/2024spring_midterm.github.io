@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的网页</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+      body {
+          background-image: linear-gradient(to right, #87CEEB, #001f3f);
+      }
+
+
+    </style>
+
+    <script>
+    var myVideo = document.getElementById("myVideo");
+
+    var images = ["coding/1.jpg", "coding/2.jpg", "coding/3.jpg", "coding/4.jpg", "coding/5.jpg", "coding/6.jpg", "coding/7.jpg", "coding/8.jpg", "coding/9.jpg"];
+    var index = 1;
+
+    // 切换图片函数
+    function changeImage() {
+        document.getElementById("slideshow").src = images[index];
+        index = (index + 1) % images.length;
+    }
+
+    setInterval(changeImage, 2000);
+</script>
+
+
+</head>
+
+<body>
+      <div class="container mt-4" style="width: 100vw;">
+        <div class="row">
+            <div class="col-lg-6 d-flex">
+                <div class="card flex-grow-1">
+                    <div class="card-body">
+                        <h5 class="card-title">点击图片访问网页</h5>
+                        <div style="max-width: 100%;">
+                          <a href="https://whatanicedaytorunaway.github.io/" target="_blank"><img src="coding/1.jpg" alt="image" style="width: 100%;"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 d-flex">
+                <div class="card flex-grow-1">
+                    <div class="card-body">
+                        <h5 class="card-title">网页截图</h5>
+                        <div style="max-width: 100%;">
+                            <img id="slideshow" src="coding/1.jpg" alt="slideshow image" style="width: 100%;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+          </div>
+
+        <!-- 介绍 -->
+
+        <div class="container mt-4"　style="width: 100vw;" >
+
+            <div class="100%">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">作品简介</h5>
+                        <p class="card-text">其实开始我想写一种阴暗怪谈式的大学模拟器,<br>
+                          就是玩家在不同场景选择不同选项最后通向不同结果的,<br>
+                          比如成功升学、转战考研、毕业即就业、休学旅行看透世界！退学创业等等哈哈哈哈..<br>
+                          但是太复杂了时间有限就做成这种个人项的了..<br>
+                          非常感谢shirley老师认真为我们准备的每一节超级充实课，<br>
+                          也非常幸运我能选到这么好的课并且坚持下来到最后一节.</p>
+                          爱与感恩！
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer>
+          <div id="footer_wrap">
+            <p style="text-align:center; padding-bottom: 20px; color:white">
+              Thanks a million <a href="https://github.com/shirleytang99" style="color: white;">@shirleyTang</a>,
+              <br>for your delication and precisenessm!!!
+            </p>
+          </div>
+        </footer>
+
+
+</body>
+</html>
